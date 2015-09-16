@@ -1,0 +1,8 @@
+{
+  "name": "gdx-css-animations",
+  "version": "0.0.1",
+  "description": "Collection of CSS animation snippets which you can use for the gdx development.",
+  "author": {
+    "name": "eightyfour"
+  }
+}

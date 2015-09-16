@@ -1,0 +1,31 @@
+// A mole animation which has beautiful blinking eyes
+// @param needs the image path to generate the relative image location for the sprite
+.mole(@node_modules_path) {
+    // background image is the mole
+    background-image: url('@{node_modules_path}/gdx-css-animations/mole/mole_animation.png');
+    background-size: 230px 270px;
+    width: 230px;
+    height: 92px;
+    &:before {
+        // background image is are the blinking eyes
+        background-image: url('@{node_modules_path}/gdx-css-animations/mole/mole_animation.png');
+        background-size: 230px 270px;
+        width: 230px;
+        height: 92px;
+        animation: blink 3s steps(2) infinite;
+        -webkit-animation: blink 3s steps(2) infinite;
+        content: ' ';
+        display: block;
+    }
+
+    @-webkit-keyframes blink {
+        0% { background-position: 0 -95px }
+        85% { background-position: 0 -95px }
+        100%   { background-position: 0 -265px }
+    }
+    @keyframes blink {
+        0% { background-position: 0 -95px }
+        85% { background-position: 0 -95px }
+        100%   { background-position: 0 -265px }
+    }
+}
